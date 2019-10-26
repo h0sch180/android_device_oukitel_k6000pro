@@ -8,4 +8,4 @@
 # For mounting Internal and SD Card in recovery
 /dev/block/mmcblk1	/sdcard		vfat	defaults defaults
 /dev/block/mmcblk1p1	/sdcard		vfat	defaults defaults
-/dev/block/mmcblk1p2	/sd-ext		auto	defaults defaults
+/dev/block/mmcblk1p2 /sd-ext auto defaults defaults

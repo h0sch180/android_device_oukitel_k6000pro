@@ -1,15 +1,15 @@
 #
-# system.prop for oukitel K6000Pro
+# system.prop for OUKITEL K6000Pro 
 #
 
 # Mediatek Chip
-persist.mtk.wcn.combo.chipid=0x321
+persist.mtk.wcn.combo.chipid=-1
 service.wcn.driver.ready=no
 service.wcn.coredump.mode=2
 ro.mediatek.chip_ver=S01
-ro.mediatek.platform=MT6735
+ro.mediatek.platform=MT6753
 ro.mediatek.version.sdk=4
-ro.mediatek.version.release=
+ro.mediatek.version.release=alps-mp-m0.mp1-V2.39.1_wtk6753.65u.m0
 
 # Telephony
 rild.libpath=/system/lib64/mtk-ril.so
@@ -39,6 +39,11 @@ ro.mtk_cam_vfb=1
 ro.mtk_matv_analog_support=1
 ro.mtk_wapi_support=1
 ro.mtk_wappush_support=1
+
+# Fingerprint
+ro.hct_fingerprint=1
+ro.hct_support_applock=1
+ro.hct_fingerprint_madev=1
 
 # WIFI
 wifi.interface=wlan0

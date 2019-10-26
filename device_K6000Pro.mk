@@ -20,10 +20,7 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # AAPT configs
 PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-
-# Include OpenGapps
-GAPPS_VARIANT := nano
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 # Bootanimation
 TARGET_BOOTANIMATION_HALF_RES := true
@@ -118,7 +115,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     wifi2agps \
-    wmt_loader
+		wmt_loader
 
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
@@ -155,6 +152,15 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/root/twrp.fstab:recovery/root/etc/twrp.fstab \
     $(LOCAL_PATH)/rootdir/root/ueventd.mt6735.rc:root/ueventd.mt6735.rc \
     $(LOCAL_PATH)/rootdir/root/init.project.rc:root/init.project.rc
+
+# Fingerprint
+PRODUCT_PACKAGES += \
+    fingerprintd
+
+# Permissions
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml \
+		frameworks/native/data/etc/android.hardware.consumerir.xml:system/etc/permissions/android.hardware.consumerir.xml
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -295,4 +301,5 @@ PRODUCT_PACKAGES += \
 # 3rd-party apps
 PRODUCT_PACKAGES += \
 YGPS \
-EngineerMode	
+EngineerMode 
+	
