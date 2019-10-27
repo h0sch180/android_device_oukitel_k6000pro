@@ -1,4 +1,4 @@
-# LineageOS 14.1 device tree for OUKITEL K6000Pro 
+# ViperOS 3.1.3 Extended device tree for OUKITEL K6000Pro 
 
 Oukitel K6000 Pro(K6000Pro)
 ============================
