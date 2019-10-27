@@ -16,16 +16,20 @@
 
 LOCAL_PATH := device/OUKITEL/K6000Pro
 
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
+$(call inherit-product, device/OUKITEL/K6000Pro/device_K6000Pro.mk)
+$(call inherit-product-if-exists, vendor/OUKITEL/K6000Pro/K6000Pro-vendor.mk)
+
 # Inherit some common Lineage OS stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/common.mk)
 # Use this to add NOTE_S to CM's lunch command menu
 #$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 #$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 #$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 #$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-
-# Inherit device configuration
-$(call inherit-product, device/OUKITEL/K6000Pro/lineage_K6000Pro.mk)
 
 # Inherit device configuration
 #$(call inherit-product, $(LOCAL_PATH)/device_K6000Pro.mk)
@@ -34,7 +38,7 @@ $(call inherit-product, device/OUKITEL/K6000Pro/lineage_K6000Pro.mk)
 # Device branding
 PRODUCT_RELEASE_NAME := K6000Pro
 PRODUCT_DEVICE := K6000Pro
-PRODUCT_NAME := lineage_K6000Pro
+PRODUCT_NAME := aosp_K6000Pro
 PRODUCT_BRAND := OUKITEL
 PRODUCT_MANUFACTURER := OUKITEL
 PRODUCT_MODEL := OUKITEL K6000Pro
@@ -48,3 +52,4 @@ WITH_SU := false
 WITH_ROOT := false
 
 PRODUCT_GMS_CLIENTID_BASE := android-google
+
