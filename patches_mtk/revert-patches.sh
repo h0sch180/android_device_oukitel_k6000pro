@@ -27,9 +27,10 @@ cd ..
 cd opt/telephony
 git reset --hard && git clean -fd
 cd ../../..
-cd packages/apps/Snap
-git reset --hard && git clean -fd
-cd ..
+#cd packages/apps/Snap
+#git reset --hard && git clean -fd
+#cd ..
+cd packages/apps
 cd FMRadio
 git reset --hard && git clean -fd
 cd ../../..

@@ -2,7 +2,6 @@
 
 brand="`echo $0 | cut -f2 -d'/'`"
 model="`echo $0 | cut -f3 -d'/'`"
-
 #cd ../../../..
 cd system/core
 patch -p1 < ../../device/$brand/$model/patches_mtk/system_core/0001-system_core.patch
@@ -36,16 +35,16 @@ cd ..
 cd base
 patch -p1 < ../../device/$brand/$model/patches_mtk/framework_base/0001-frameworks_base.patch
 patch -p1 < ../../device/$brand/$model/patches_mtk/framework_base/0002-Fix-Minior-Bugs.patch
-patch -p1 < ../../device/$brand/$model/patches_mtk/framework_base/0003-frameworks_base_signature_spoofing.patch
+#patch -p1 < ../../device/$brand/$model/patches_mtk/framework_base/0003-frameworks_base_signature_spoofing.patch
 git clean -f -d
 cd ..
 cd opt/telephony
 patch -p1 < ../../../device/$brand/$model/patches_mtk/frameworks_opt_telephony.patch
 cd ../../..
-cd packages/apps/Snap
-patch -p1 < ../../../device/$brand/$model/patches_mtk/snap.patch
-cd ..
-cd FMRadio
+#cd packages/apps/Snap
+#patch -p1 < ../../../device/$brand/$model/patches_mtk/snap.patch
+#cd ..
+cd packages/apps/FMRadio
 patch -p1 < ../../../device/$brand/$model/patches_mtk/fmradio.patch
 cd ../../..
 cd external/wpa_supplicant_8
